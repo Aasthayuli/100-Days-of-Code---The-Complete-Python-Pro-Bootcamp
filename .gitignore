@@ -1,0 +1,45 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.ENV/
+
+# PyCharm
+.idea/
+
+# Logs and databases
+*.log
+*.sqlite3
+*.db
+
+# Cache files
+*.egg-info/
+.eggs/
+*.cache
+.cache/
+
+# Secrets or config
+*.env
+.env.*
+
+# Test or temp files
+*.tmp
+*.temp
+*.bak
+
+# Compiled binaries
+*.so
+*.dll
+*.exe
+*.out
+*.a
+*.o
+
+# Other
+*.swp
