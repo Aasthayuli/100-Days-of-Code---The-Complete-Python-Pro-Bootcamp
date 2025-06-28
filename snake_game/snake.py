@@ -1,6 +1,5 @@
-from tkinter.constants import RIGHT
-from turtle import Turtle
 
+from turtle import Turtle
 
 STARTING_POSITIONS = [(0,0), (-20,0), (-40,0)]
 MOVE_DISTANCE = 20
@@ -39,10 +38,6 @@ class Snake:
     def right(self):
         self.head.setheading(RIGHT)
 
-    def extend(self):
-        # Add a new segment to the snake
-        self.add_segment(self.segments[-1].position()) # starts counting from the end of the list
-
     def add_segment(self, position):
         new_segment = Turtle("square")
         new_segment.color("white")
@@ -50,3 +45,13 @@ class Snake:
         new_segment.goto(position)
         self.segments.append(new_segment)
 
+    def reset(self):
+        for seg in self.segments:
+            seg.goto(1000, 1000)
+        self.segments.clear()
+        self.create_snake()
+        self.head = self.segments[0]
+
+    def extend(self):
+        # Add a new segment to the snake
+        self.add_segment(self.segments[-1].position()) # starts counting from the end of the list
